@@ -1,0 +1,24 @@
+﻿<Window x:Class="Wpf_1st_application.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_1st_application"
+        mc:Ignorable="d"
+        Title="My first WPF!" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush TileMode="None" ImageSource="https://theknow.denverpost.com/wp-content/uploads/2020/08/IMG_4252.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="373*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="butnpi" Content="click me!!" HorizontalAlignment="Left" Margin="287,82,0,0" VerticalAlignment="Top" Width="164" Height="95" Click="butnpi_Click" Grid.Column="1"/>
+        <Label x:Name="title_label_" Content="this is my first wpf application!!!" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Height="119" Width="326" FontWeight="Bold" FontSize="20" Foreground="#FFEF1A1A" Grid.ColumnSpan="2"/>
+        <Label x:Name="label_2" Content="Label" HorizontalAlignment="Left" Margin="11,148,0,0" VerticalAlignment="Top" Height="46" Width="226" FontSize="22" Grid.Column="1"/>
+        <TextBox x:Name="txtbx" HorizontalAlignment="Center" Margin="0,322,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txtbx_TextChanged" Grid.Column="1"/>
+        <Button x:Name="btnexit" Content="exit" Grid.Column="1" HorizontalAlignment="Left" Margin="97,217,0,0" VerticalAlignment="Top" IsCancel="True" Height="80" Width="190" Click="btnexit_Click"/>
+
+    </Grid>
+</Window>
