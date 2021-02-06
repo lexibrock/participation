@@ -6,19 +6,28 @@
         xmlns:local="clr-namespace:Wpf_1st_application"
         mc:Ignorable="d"
         Title="My first WPF!" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="MyGrid">
         <Grid.Background>
-            <ImageBrush TileMode="None" ImageSource="https://theknow.denverpost.com/wp-content/uploads/2020/08/IMG_4252.jpg"/>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White"/>
+                <GradientStop Color="#FF31FFEC" Offset="0.489"/>
+                <GradientStop Color="White" Offset="0.985"/>
+            </LinearGradientBrush>
         </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="27*"/>
-            <ColumnDefinition Width="373*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="butnpi" Content="click me!!" HorizontalAlignment="Left" Margin="287,82,0,0" VerticalAlignment="Top" Width="164" Height="95" Click="butnpi_Click" Grid.Column="1"/>
-        <Label x:Name="title_label_" Content="this is my first wpf application!!!" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Height="119" Width="326" FontWeight="Bold" FontSize="20" Foreground="#FFEF1A1A" Grid.ColumnSpan="2"/>
-        <Label x:Name="label_2" Content="Label" HorizontalAlignment="Left" Margin="11,148,0,0" VerticalAlignment="Top" Height="46" Width="226" FontSize="22" Grid.Column="1"/>
-        <TextBox x:Name="txtbx" HorizontalAlignment="Center" Margin="0,322,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txtbx_TextChanged" Grid.Column="1"/>
-        <Button x:Name="btnexit" Content="exit" Grid.Column="1" HorizontalAlignment="Left" Margin="97,217,0,0" VerticalAlignment="Top" IsCancel="True" Height="80" Width="190" Click="btnexit_Click"/>
+      
+        <Button x:Name="Button_Enter" 
+                Content="ENTER" Grid.Column="1" HorizontalAlignment="Left" Margin="433,296,0,0" VerticalAlignment="Top" 
+                IsCancel="True" Height="92" Width="178" FontSize="48" Background="{x:Null}" Foreground="Black" 
+                MouseEnter="MouseEnter_ENTER" 
+                MouseLeave="MouseLeave_ENTER" 
+                Click="Button_Enter_Click"/>
+        <TextBox x:Name="Text_Box_Enter_Name" Grid.Column="1" HorizontalAlignment="Left" Margin="35,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Height="70" FontSize="48" />
+        <DatePicker x:Name="DatePicker_Birthday" Grid.Column="1" HorizontalAlignment="Left" Margin="411,165,0,0" VerticalAlignment="Top" FontSize="48" Height="72" Width="305"/>
+        <Label x:Name="Label_HelloMessage" Content="This is my first WPF Application! &#xA;Please enter your: &#xA;Name and Birthday below:" Grid.Column="1" HorizontalAlignment="Center" Height="166" Margin="0,10,0,0" VerticalAlignment="Top" Width="700" FontSize="36"/>
 
     </Grid>
 </Window>

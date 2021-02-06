@@ -24,24 +24,42 @@ namespace Wpf_1st_application
         public MainWindow()
         {
             InitializeComponent();
-
-            label_2.Content = string.Empty;
-
+        }
+        private void MouseEnter_ENTER(object sender, MouseEventArgs e)
+        {
+            MyGrid.Background = Brushes.Gray;   
         }
 
-        //by clicking the event in property double click in click
-        // ORRRR by double clicking the box
-        private void butnpi_Click(object sender, RoutedEventArgs e)
+        private void MouseLeave_ENTER(object sender, MouseEventArgs e)
         {
-            label_2.Content = "Hello!!";
-            MessageBox.Show("HI");
-            MessageBox.Show("HI", "POP UP", MessageBoxButton.OKCancel, MessageBoxButton.Exclaim);
-            label_2.Content = TextInput.;
+            MyGrid.Background = Brushes.Transparent;
         }
 
-        private void btnexit_Click(object sender, RoutedEventArgs e)
+        private void Button_Enter_Click(object sender, RoutedEventArgs e)
         {
-            Environment.Exit(0);
+            string name = Text_Box_Enter_Name.Text;
+            
+            // birthday = Convert.ToDateTime(DatePicker_Birthday);
+            string age = Convert.ToDateTime(birthday);
+            // Convert.ToString(birthday);
+
+
+            //DateTime birthday = DatePicker_Birthday;
+            //var DatePicker_Birthday = 
+            // (DatePicker_Birthday);
+            //DateTime birthday = DatePicker_Birthday.DateTime;
+            //DateTime today = DateTime.Today);
+            //DateTime age = DateTime.Today - DatePicker_Birthday;
+            
+            
+            MessageBox.Show(name, age.ToString());
+        }
+
+        private void DatePicker_Birthday(object sender, RoutedEventArgs e)
+        {
+            
+                string birthday = new DateTime(DatePicker_Birthday);
+                
         }
     }    
 }
