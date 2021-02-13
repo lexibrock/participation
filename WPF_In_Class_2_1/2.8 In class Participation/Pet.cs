@@ -6,9 +6,9 @@ namespace _2._8_In_class_Participation
 {
     public class Pet
     {
-        public string Name { get; set; };
-        public string Breed { get; set; };
-        public string PicURL { get; set; };
+        public string Name { get; set; }
+        public string Breed { get; set; }
+        public string PicURL { get; set; }
 
         public Pet()
         {
@@ -19,7 +19,7 @@ namespace _2._8_In_class_Participation
 
         public override string ToString()
         {
-            return $"{Name} ({Breed)})";
+            return $"{Name} {Breed}";
         }
     }
 }

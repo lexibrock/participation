@@ -47,9 +47,8 @@ namespace _2._8_In_class_Participation
                 PicURL = url
             };
 
-    
             lstPets.Items.Add(myPet);
-
+            //lstPets.Items.Add(name);WRONG
         }
 
         private void lstPets_SelectionChanged(object sender, SelectionChangedEventArgs e)

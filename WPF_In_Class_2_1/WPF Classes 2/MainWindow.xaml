@@ -1,0 +1,29 @@
+﻿<Window x:Class="WPF_Classes_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Classes_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="myGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="127*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="imgtoy" HorizontalAlignment="Left" Height="402" Margin="10,10,0,0" VerticalAlignment="Top" Width="785" Grid.ColumnSpan="2">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="https://internetofbusiness.com/wp-content/uploads/2017/11/toys-2165123_640-1280x720.jpg" Opacity="0.5"/>
+            </Image.OpacityMask>
+        </Image>
+        <Label x:Name="lblEnterManufacturerName" Content="Enter Manufacturer Name:" HorizontalAlignment="Left" Margin="55,112,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblEnterToyName" Content="Enter Toy Name:" HorizontalAlignment="Left" Margin="55,168,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblEnterToyPrice" Content="Enter Toy Price:" HorizontalAlignment="Left" Margin="61,240,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtbxManufacturerName" HorizontalAlignment="Left" Margin="84,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txtbxToyName" HorizontalAlignment="Left" Margin="84,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txtbxToyPrice" HorizontalAlignment="Left" Margin="84,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <ListBox x:Name="lstbxToys" Margin="264,93,41,92" Grid.Column="1" SelectionChanged="lstbxToys_SelectionChanged"/>
+        <Button x:Name="bttnAddToy" Content="Add Toy" HorizontalAlignment="Left" Margin="61,301,0,0" VerticalAlignment="Top" Height="98" Width="311" Grid.ColumnSpan="2" Click="bttnAddToy_Click"/>
+
+    </Grid>
+</Window>
